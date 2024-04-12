@@ -1,0 +1,84 @@
+WEEK_1---->
+#1) touch: Create a new file or update its timestamp.
+•Syntax: touch [OPTION]…[FILE]
+•Example: Create empty files called ‘file1’ and ‘file2’
+•$ touch file1 file2
+#2) cat: Concatenate files and print to stdout.
+•Syntax: cat [OPTION]…[FILE]
+•Example: Create file1 with entered cotent
+•$ cat > file1
+•Hello
+•^D
+#3) cp: Copy files
+•Syntax: cp [OPTION]source destination
+•Example: Copies the contents from file1 to file2 and the contents of file1 are retained
+•$ cp file1 file2
+#4) mv: Move files or rename files
+•Syntax: mv [OPTION]source destination
+•Example: Create empty files called ‘file1’ and ‘file2’
+•$ mv file1 file2
+#5) rm: Remove files and directories
+•Syntax: rm [OPTION]…[FILE]
+•Example: Delete file1
+•$ rm file1
+#6) mkdir: Make a directory•Syntax: mkdir [OPTION] directory
+•Example: Create a directory called dir1
+•$ mkdir dir1
+#7) rmdir: Remove a directory
+•Syntax: rmdir [OPTION] directory
+•Example: Create empty files called ‘file1’ and ‘file2’
+•$ rmdir dir1
+#8) cd: Change directory
+•Syntax: cd [OPTION] directory
+•Example: Change working directory to dir1
+•$ cd dir1
+#9) pwd: Print the present working directory
+•Syntax: pwd [OPTION]
+•Example: Print ‘dir1’ if a current working directory is dir1
+
+
+WEEK_2---->
+$cat > geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+
+2|Page$sed 's/unix/linux/' geekfile.txt
+Output :
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+
+$cat > employee.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+8|Pagesunil peon sales 13000
+satvik director purchase 80000
+
+$ awk '/manager/ {print}' employee.txt
+Output:
+ajay manager account 45000
+varun manager sales 50000
+amit manager account 47000
+
+$ awk '{print $1,$4}' employee.txt
+• Use of NR built-in variables (Display Line Number)
+$ awk '{print NR,$0}' employee.txt
+• To return the second column/item from file1.txt:
+$ awk '{print $2}' file1.txt
+• To count the lines in a file:
+9|Page$ awk '{ print NR }' file.txt
+awk free -M
+• awk ‘/Mem/{print}/’ free -m
+• awk ‘NR==2{printNR,$0}’ free -m
+
+shutdown [options] [time] [message]
+shutdown -r +5 reboot
